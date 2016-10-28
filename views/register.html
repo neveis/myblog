@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signin</title>
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/register.css" rel="stylesheet">
+
+    <script src="/static/js/register.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="register-account" class="form-reg" role="form">
+            <h2 class="form-reg-heading">Please register</h2>
+            <div class="alert-inline">
+                <input type="text" name="nickname" class="form-control" placeholder="Nickname" required autofocus>
+                <div class="reg-alert n-alert">
+                </div>
+            </div>
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+            <div class="alert-inline">
+                <input type="password" name="cpassword" class="form-control" placeholder="Confirm Password" required>
+                <div class="reg-alert cp-alert">
+                </div>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        </form>
+
+    </div>
+    <!-- /container -->
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<div class="col-md-2">
+	<nav>
+		<ul class="nav nav-pills nav-stacked">
+			<li><a href="/">Home</a></li>
+			<li><a href="/archive">Archive</a></li>
+			{% if signin %}
+			<li><a href="/post">Post</a></li>
+			<li><a href="/upload">Upload</a></li>
+			<li><a href="/signout">Signout</a></li>
+			{% else %}
+			<li><a href="/signin">Signin</a></li>
+			<li><a href="/register">Register</a></li>
+			{% endif %}
+		</ul>
+	</nav>
+</div>
