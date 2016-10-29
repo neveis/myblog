@@ -1,24 +1,19 @@
 {% extends "base.html" %} {% block main %}
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-2">
-            <h1>{{title | e}}</h1>
-        </div>
-    </div>
-    <div class="row">
-        {% block leftsidebar %} {% include "left-sidebar.html" ignore missing %} {% endblock %}
-        <div class="col-md-10">
-            <ul>
+        <div class="col-md-8">
+            <ul style="font-size:18px">
                 {% set lastYear = "" %} 
                 {% for article in articles%} 
                 {% if lastYear != article.time.year %}
-                <label>{{ article.time.year }}</label>
+                <p style="font-size:30px">{{ article.time.year }}</p>
                 {% set lastYear = article.time.year %} 
                 {% endif %}
                 <li><a target="_blank" href="/article/{{ article.id }}">{{ article.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
+        {% include "right-sidebar.html" ignore missing %} 
     </div>
 </div>
 {% endblock %}

@@ -1,29 +1,20 @@
 {% extends "base.html" %} {% block main %}
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-2">
-			<h1>{{title | e}}</h1>
-		</div>
-	</div>
-	<div class="row">
-		{% block leftsidebar %} {% include "left-sidebar.html" ignore missing %} {% endblock %}
-		<div class="col-md-10">
-			<h3>Post</h3>
-			<p>xinaien dosenx id eion dlsn eosn!!</p>
+		<div class="col-md-9">
 			{% for article in articles %}
-			<div class="article">
-				<h3><a href="/article/{{ article.id }}">{{ article.title | e}}</a></h3>
-				<small>作者:{{ article.name | e}}</small>
-				<small><span>阅读: {{ article.pv }}</span> <span>评论: {{ article.cl }}</span></small>
-				<div>
+			<div class="article well article-well">
+				<h2 class="article-title"><a href="/article/{{ article.id }}">{{ article.title | e}}</a></h2>
+				<p class="article-meta">作者:{{ article.name | e}} <span>阅读: {{ article.pv }}</span> <span>评论: {{ article.cl }}</span></p>
+				<div class="article-main">
 					{{article.post}}
 				</div>
-				{% if user and (user.name == article.name) %}
-				<div class="tags">
-					{% for tag in article.tags %}
-					<span><a href="/tag/{{ tag }}">{{ tag }}</a></span>
-					{% endfor %}
+				<div class="article-tags">
+					<p>标签: {% for tag in article.tags %}
+						<span><a href="/tag/{{ tag }}">{{ tag }}</a></span> {% endfor %}
+					</p>
 				</div>
+				{% if user and (user.name == article.name) %}
 				<div>
 					<span><a href="/edit/{{ article.id }}">编辑</a></span> <span><a href="/delete/{{ article.id }}">删除</a></span>
 				</div>
@@ -31,7 +22,7 @@
 			</div>
 			{% endfor %}
 			<div class="row">
-				<ul class="pagination">
+				<ul class="pagination" style="margin-left: 30px;">
 					{% if not isFirstPage %}
 					<li><a href="/?p={{ currentPage - 1 }}">&laquo;</a></li>
 					{% endif %} {% for i in pageList %} {% if i == currentPage %}
@@ -44,6 +35,7 @@
 				</ul>
 			</div>
 		</div>
+		{% include "right-sidebar.html" ignore missing %}
 	</div>
 </div>
 {% endblock %}

@@ -1,16 +1,10 @@
 {% extends "base.html" %} {% block main %}
 <div class="container">
 	<div class="row">
-		<div class="col-md-10 col-md-offset-2">
-			<h1>{{title | e}}</h1>
-		</div>
-	</div>
-	<div class="row">
-		{% block leftsidebar %} {% include "left-sidebar.html" ignore missing %} {% endblock %}
-		<div class="col-md-10">
+		<div class="col-md-8">
 			<div class="article">
 				<h3>{{ article.title | e}}</h3>
-				<small>作者:{{ article.name | e}}</small>
+				<p class="article-mate">作者:{{ article.name | e}}</p>
 				<small><span>阅读: {{ article.pv }}</span> <span>评论: {{ article.cl }}</span></small>
 				<div>
 					{{article.post}}
@@ -66,6 +60,7 @@
 				</div>
 			</div>
 		</div>
+		{% include "right-sidebar.html" ignore missing %}
 	</div>
 </div>
 {% endblock %}
