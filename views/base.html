@@ -8,105 +8,10 @@
 	<meta name="description" content="a blog">
 	<title>{{ title }}</title>
 	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<link rel="stylesheet" href="/static/css/blog.css">
 	<script src="/static/js/jquery.min.js"></script>
 	<script src="/static/js/vue.min.js"></script>
 	<script src="/static/js/bootstrap.js"></script>
-
-	<style>
-		@media (min-width: 1200px) {
-			.container {
-				width: 970px;
-			}
-		}
-		
-		.title-logo {
-			margin-top: 30px;
-			margin-bottom: 20px;
-		}
-		
-		.blog-title {
-			font-size: 60px;
-		}
-		
-		.navigation {
-			margin-bottom: 20px;
-			background-color: #428bca;
-			-webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
-			box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
-		}
-		/* Nav links */
-		
-		.blog-nav-item {
-			position: relative;
-			display: inline-block;
-			padding: 10px;
-			font-weight: 500;
-			color: #cdddeb;
-		}
-		
-		.blog-nav-item:hover,
-		.blog-nav-item:focus {
-			color: #fff;
-			text-decoration: none;
-		}
-		/* Active state gets a caret at the bottom */
-		
-		.blog-nav .active {
-			color: #fff;
-		}
-		
-		.blog-nav .active:after {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			width: 0;
-			height: 0;
-			margin-left: -5px;
-			vertical-align: middle;
-			content: " ";
-			border-right: 5px solid transparent;
-			border-bottom: 5px solid;
-			border-left: 5px solid transparent;
-		}
-		
-		.article {
-			margin-bottom: 20px;
-			padding-left: 15px;
-			padding-right: 15px;
-			font-size: 18px;
-		}
-		
-		.article-well {
-			border: 0px;
-			box-shadow: 0 0px 5px #c2c2c2;
-			border-radius: 4px;
-			background-color: #fff;
-		}
-		
-		.article .article-title {
-			margin-bottom: 10px;
-			font-size: 40px;
-		}
-		
-		.article .article-title a {
-			color: #333;
-		}
-		
-		.article .article-title a:link {
-			text-decoration: none;
-		}
-		
-		.article .article-meta {
-			margin-bottom: 20px;
-		}
-		
-		.article hr {
-			margin-top: 20px;
-			margin-bottom: 10px;
-			border: 1px;
-			border-top: 1px solid #cdddeb;
-		}
-	</style>
 </head>
 
 <body>
@@ -127,6 +32,9 @@
 		</div>
 	</div>
 	{% block main %} {% endblock %}
+	<footer id="blog-footer">
+		<p>Copyright © 2016 - 2016 . All Rights Reserved . Created by Pbin . Powered by Bootstrap . </p>
+	</footer>
 </body>
 
 </html>

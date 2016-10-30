@@ -1,20 +1,21 @@
 <div class="col-md-3">
-	<div class="panel panel-info">
-		<div class="panel-body" clearfix>
-			<div class="avatar-head">
-				{% if user %}
-				<img src="/pic/avatar.jpg" class="img-circle">
-				<span style="font-size:18px;margin-left: 20px;">{{ user.name }}</span> {% else %}
-				<img src="/pic/avatar.jpg" class="img-circle">
-				<span style="font-size:18px;margin-left: 20px;">未登录</span> {% endif %}
-			</div>
-			<div class="btn-group btn-group-lg" style="margin-top: 30px;">
-				{% if user %}
-				<a class="btn btn-primary" href="/post">发表</a>
-				<a class="btn btn-primary" href="/signout">登出</a> {% else %}
-				<a class="btn btn-primary" href="/signin">登录</a>
-				<a class="btn btn-primary" href="/register">注册</a> {% endif %}
-			</div>
-		</div>
-	</div>
+    <div class="panel panel-info">
+        <div class="panel-body" clearfix>
+            <div class="avatar-head">
+                {% if user %}
+                <img src="/pic/avatar.jpg" class="img-circle">
+                <span style="font-size:18px;margin-left: 20px;">{{ user.name }}</span> {% else %}
+                <img src="/pic/avatar.jpg" class="img-circle">
+                <span style="font-size:18px;margin-left: 20px;">未登录</span> {% endif %}
+            </div>
+            <div class="btn-group btn-group" style="margin-top: 30px;">
+                {% if user %}
+                <a class="btn btn-primary" href="/post">发表</a>
+                <a class="btn btn-primary" href="/upload">上传</a>
+                <a class="btn btn-primary" href="/signout">登出</a> {% else %}
+                <a class="btn btn-primary" href="/signin">登录</a>
+                <a class="btn btn-primary" href="/register">注册</a> {% endif %}
+            </div>
+        </div>
+    </div>
 </div>

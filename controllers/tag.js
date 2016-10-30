@@ -3,7 +3,7 @@ var Post = require('../model').Post;
 var markdown = require('markdown').markdown;
 
 module.exports = {
-    'GET /tag/:tag': async (ctx, next) => {
+    'GET /tag/:tag': async(ctx, next) => {
         var signin = false;
         if (ctx.state.user) {
             signin = true;
@@ -23,7 +23,7 @@ module.exports = {
         ctx.renderNoE('tag.html', {
             signin: signin,
             user: ctx.state.user,
-            title: tag,
+            tag: tag,
             articles: articles
         });
     }

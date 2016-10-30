@@ -1,63 +1,73 @@
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
 }
 
 .form-reg {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
 }
+
 .form-reg .form-reg-heading {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .form-reg .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
 }
+
 .form-reg .form-control:focus {
-  z-index: 2;
+    z-index: 2;
 }
+
 .form-reg input[type="text"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
+
 .form-reg input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
+
 .form-reg input[type="password"] {
-  margin-bottom: -1px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+    margin-bottom: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
-.form-reg input[name="cpassword"]{
-  margin-bottom: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+
+.form-reg input[name="cpassword"] {
+    margin-bottom: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
-.alert-inline{
-  width: 500px;
+
+.alert-inline {
+    width: 500px;
 }
-.alert-inline .form-control{
-  width: 300px;
-  display: inline-block;
+
+.alert-inline .form-control {
+    width: 300px;
+    display: inline-block;
 }
-.alert-inline .reg-alert{
-  display: inline-block;
-  margin-bottom: 0px;
+
+.alert-inline .reg-alert {
+    display: inline-block;
+    margin-bottom: 0px;
 }
-.reg-alert .alert{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 0px;
+
+.reg-alert .alert {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
 }
